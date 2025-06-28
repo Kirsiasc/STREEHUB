@@ -1,0 +1,125 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+Name = "STREE HUB | Dead Raills | v0.28.6",
+Icon = earth, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+LoadingTitle = "STREE HUB LOADING",
+LoadingSubtitle = "Create : Stree Team",
+ShowText = "Ocean", -- for mobile users to unhide rayfield, change if you'd like
+Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+DisableRayfieldPrompts = false,
+DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+ConfigurationSaving = {
+Enabled = true,
+FolderName = STREE, -- Create a custom folder for your hub/game
+FileName = "STREE HUB"
+},
+
+Discord = {
+Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+Invite = "https://discord.gg/jdmX43t5mY", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+},
+
+KeySystem = true, -- Set this to true to use our key system
+KeySettings = {
+Title = "STREE HUB",
+Subtitle = "Stree Key System",
+Note = "https://discord.gg/RkE9yWedHn , https://whatsapp.com/channel/0029VbAwRihKAwEtwyowt62N", -- Use this to tell the user how to get a key
+FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+Key = {"Free Key","Free Login","KEY1JL"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+}
+})
+
+local UniversalTab = Window:CreateTab("🏠Home", "house")
+local Section = UniveraalTab:CreateSection("🏠Home")
+
+local Button = UniversalTab:CreateButton({
+Name = "Discord",
+Callback = function()
+        "https://discord.gg/jdmX43t5mY"
+end,
+})
+
+UniversalTab:CreateButton({
+Name = "Saluran Whatsapp",
+Callback = function()
+        "https://whatsapp.com/channel/0029VbAwRihKAwEtwyowt62N"
+end,
+})
+
+local UniversalTab = Window:CreateTab("Universal", "leaf")
+local Section = UniveraalTab:CreateSection("Universal Scripts")
+
+local Button = UniversalTab:CreateButton({
+Name = "Fly",
+Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+UniversalTab:CreateButton({
+Name = "Infinite Jump",
+Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+UniversalTab:CreateButton({
+Name = "anti-afk",
+Callback = function()
+       loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/anti-afk%20via%20autofocus.txt"))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+local UniversalTab = Window:CreateTab("Scripts Populer", "laptop-minimal")
+local Section = UniveraalTab:CreateSection("Scripts Terkenal")
+
+local Button = GameTab:CreateButton({
+Name = "Skull Hub",
+Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Skull-Hub-36851"))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+GameTab:CreateButton({
+Name = "Shader",
+Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/p0e1/1/refs/heads/main/SimpleShader.lua"))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+GameTab:CreateButton({
+Name = "Shader",
+Callback = function()
+        loadstring(permainan:HttpGet('https://raw.githubusercontent.com/m00ndiety/auto-bonds-v3final1/refs/heads/main/obf_auto_bonds_v3_final_1.lua.txt'))()
+-- The function that takes place when the button is pressed
+end,
+})
+
+Rayfield:Notify({
+   Title = "Creator Stree Hub",
+   Content = "Jangan Lupa Follow akun TikTok @kirsia.sc",
+   Duration = 3,
+   Image = "4483362458",
+})
+
+Rayfield:Notify({
+   Title = "STREE HUB Loading",
+   Content = "Scripts Sedang Loading",
+   Duration = 3,
+   Image = "check",
+})
+
+Rayfield:LoadConfiguration()
